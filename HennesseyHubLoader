@@ -63,6 +63,8 @@ pcall(function()
 		gametext = "Game 2"
 	elseif game.PlaceId == 5938036553 then --Frontlines
 		gametext = "Frontlines"
+	elseif game.PlaceId == 5278850819 then --stay alive and flex your time on others
+		gametext = "stay alive and flex your time on others"
 	else --Universal
 		gametext = "Universal ESP + Aimbot"
 	end
