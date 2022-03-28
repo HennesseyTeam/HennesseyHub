@@ -39,6 +39,8 @@ pcall(function()
 			print("2")
 		elseif game.PlaceId == 5938036553 then --Frontlines
 			loadstring(game:HttpGet'https://raw.githubusercontent.com/wally-rblx/roblox-scripts/main/frontlines.lua')()
+		elseif game.PlaceId == 5278850819 then --stay alive and flex your time on others
+			loadstring(game:HttpGet('https://raw.githubusercontent.com/wally-rblx/stay-alive-and-flex-time/main/main.lua', true))()
 		else --Universal
 			loadstring(game:HttpGet'https://raw.githubusercontent.com/HennesseyTeam/HennesseyHub/main/Universal')()
 		end
@@ -167,3 +169,10 @@ DiscordInvite.Font = Enum.Font.SourceSans
 DiscordInvite.TextSize = 14
 DiscordInvite.TextScaled = true
 DiscordInvite.Parent = HennesseyHubFrame
+
+game.StarterGui:SetCore("SendNotification", {
+    Title    = "Hennessey Hub";
+    Text     = "Version 0.1.2";
+    Duration = 10;
+    Button1  = "Ok";
+})
