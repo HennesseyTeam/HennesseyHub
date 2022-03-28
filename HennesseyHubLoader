@@ -1,5 +1,5 @@
 --// GUI2LUA V1 \\--
---// Counted 26 objects
+--// Counted 15 objects
 
 local HennesseyHub = Instance.new('ScreenGui')
 HennesseyHub.Name = "HennesseyHub"
@@ -8,14 +8,14 @@ HennesseyHub.Parent = game:GetService("Players").LocalPlayer:WaitForChild("Playe
 
 local HennesseyHubFrame = Instance.new('Frame')
 HennesseyHubFrame.Name = "HennesseyHubFrame"
-HennesseyHubFrame.Position = UDim2.new(0.1978,0,0.3327,0)
+HennesseyHubFrame.Position = UDim2.new(0.2795,0,0.2916,0)
 HennesseyHubFrame.Size = UDim2.new(0,436,0,212)
 HennesseyHubFrame.BackgroundColor3 = Color3.new(0.1765,0.1765,0.1765)
 HennesseyHubFrame.Parent = HennesseyHub
 
 local GameText = Instance.new('TextButton')
 GameText.Name = "GameText"
-GameText.Position = UDim2.new(0.2671,0,0.6566,0)
+GameText.Position = UDim2.new(0.2648,0,0.6189,0)
 GameText.Size = UDim2.new(0,200,0,50)
 GameText.BackgroundColor3 = Color3.new(0.1176,0.1176,0.1176)
 GameText.BorderColor3 = Color3.new(1,0.5608,0)
@@ -23,6 +23,7 @@ GameText.Text = "Text"
 GameText.TextColor3 = Color3.new(1,1,1)
 GameText.Font = Enum.Font.Ubuntu
 GameText.TextSize = 14
+GameText.TextScaled = true
 GameText.Parent = HennesseyHubFrame
 
 
@@ -94,7 +95,7 @@ end)
 
 local HenLogo = Instance.new('ImageLabel')
 HenLogo.Name = "HenLogo"
-HenLogo.Position = UDim2.new(0.3677,0,0.146,0)
+HenLogo.Position = UDim2.new(0.3654,0,0.0658,0)
 HenLogo.Size = UDim2.new(0,114,0,109)
 HenLogo.BackgroundColor3 = Color3.new(1,1,1)
 HenLogo.BackgroundTransparency = 1
@@ -118,6 +119,7 @@ HennesseyText.Text = "Hennessey Hub"
 HennesseyText.TextColor3 = Color3.new(1,0.5608,0)
 HennesseyText.Font = Enum.Font.SourceSansSemibold
 HennesseyText.TextSize = 14
+HennesseyText.TextScaled = true
 HennesseyText.Parent = TopBar
 
 local Close = Instance.new('TextButton')
@@ -130,6 +132,7 @@ Close.Text = "X"
 Close.TextColor3 = Color3.new(1,1,1)
 Close.Font = Enum.Font.Ubuntu
 Close.TextSize = 14
+Close.TextScaled = true
 Close.Parent = TopBar
 
 
@@ -153,147 +156,14 @@ local UICorner = Instance.new('UICorner')
 UICorner.CornerRadius = UDim.new(0,48)
 UICorner.Parent = TopBar
 
-local Changelog = Instance.new('TextButton')
-Changelog.Name = "Changelog"
-Changelog.Position = UDim2.new(0.7258,0,0.7793,0)
-Changelog.Size = UDim2.new(0,87,0,24)
-Changelog.BackgroundColor3 = Color3.new(0.1176,0.1176,0.1176)
-Changelog.BorderColor3 = Color3.new(1,0.5608,0)
-Changelog.Text = "Changelog"
-Changelog.TextColor3 = Color3.new(1,1,1)
-Changelog.Font = Enum.Font.Ubuntu
-Changelog.TextSize = 14
-Changelog.Parent = HennesseyHubFrame
-
-
---!fakescript
-pcall(function()
-	local script = { Parent = Changelog }
-	function OnClicked() 
-		script.Parent.Parent.Parent.Changelog.Visible = true
-	end 
-	
-	script.Parent.MouseButton1Down:connect(OnClicked)
-end)
---!end
-
-local Info = Instance.new('TextButton')
-Info.Name = "Info"
-Info.Position = UDim2.new(0.7258,0,0.6566,0)
-Info.Size = UDim2.new(0,87,0,26)
-Info.BackgroundColor3 = Color3.new(0.1176,0.1176,0.1176)
-Info.BorderColor3 = Color3.new(1,0.5608,0)
-Info.Text = "Info"
-Info.TextColor3 = Color3.new(1,1,1)
-Info.Font = Enum.Font.Ubuntu
-Info.TextSize = 14
-Info.Parent = HennesseyHubFrame
-
-
---!fakescript
-pcall(function()
-	local script = { Parent = Info }
-	function OnClicked() 
-		script.Parent.Parent.Parent.Info.Visible = true
-	end 
-	
-	script.Parent.MouseButton1Down:connect(OnClicked)
-end)
---!end
-
-local Changelog = Instance.new('Frame')
-Changelog.Name = "Changelog"
-Changelog.Position = UDim2.new(0.6387,0,0.5734,0)
-Changelog.Size = UDim2.new(0,190,0,89)
-Changelog.BackgroundColor3 = Color3.new(0.1176,0.1176,0.1176)
-Changelog.BorderColor3 = Color3.new(1,0.5608,0)
-Changelog.Visible = false
-Changelog.Parent = HennesseyHub
-
-local MainLabel = Instance.new('TextLabel')
-MainLabel.Name = "MainLabel"
-MainLabel.Position = UDim2.new(-0.0053,0,0,0)
-MainLabel.Size = UDim2.new(0,66,0,24)
-MainLabel.BackgroundColor3 = Color3.new(1,1,1)
-MainLabel.BackgroundTransparency = 1
-MainLabel.BorderColor3 = Color3.new(1,1,1)
-MainLabel.Text = "Changelog:"
-MainLabel.TextColor3 = Color3.new(1,1,1)
-MainLabel.Font = Enum.Font.SourceSans
-MainLabel.TextSize = 14
-MainLabel.Parent = Changelog
-
-local Changelog1 = Instance.new('TextLabel')
-Changelog1.Name = "Changelog1"
-Changelog1.Position = UDim2.new(-0.0053,0,0.1798,0)
-Changelog1.Size = UDim2.new(0,111,0,24)
-Changelog1.BackgroundColor3 = Color3.new(1,1,1)
-Changelog1.BackgroundTransparency = 1
-Changelog1.BorderColor3 = Color3.new(1,1,1)
-Changelog1.Text = "-Created the Hub"
-Changelog1.TextColor3 = Color3.new(1,1,1)
-Changelog1.Font = Enum.Font.SourceSans
-Changelog1.TextSize = 14
-Changelog1.Parent = Changelog
-
-local Changelog2 = Instance.new('TextLabel')
-Changelog2.Name = "Changelog2"
-Changelog2.Position = UDim2.new(-0.0053,0,0.3596,0)
-Changelog2.Size = UDim2.new(0,111,0,24)
-Changelog2.BackgroundColor3 = Color3.new(1,1,1)
-Changelog2.BackgroundTransparency = 1
-Changelog2.BorderColor3 = Color3.new(1,1,1)
-Changelog2.Text = ""
-Changelog2.TextColor3 = Color3.new(1,1,1)
-Changelog2.Font = Enum.Font.SourceSans
-Changelog2.TextSize = 14
-Changelog2.Parent = Changelog
-
-local Changelog3 = Instance.new('TextLabel')
-Changelog3.Name = "Changelog3"
-Changelog3.Position = UDim2.new(-0.005,0,0.54,0)
-Changelog3.Size = UDim2.new(0,190,0,24)
-Changelog3.BackgroundColor3 = Color3.new(1,1,1)
-Changelog3.BackgroundTransparency = 1
-Changelog3.BorderColor3 = Color3.new(1,1,1)
-Changelog3.Text = ""
-Changelog3.TextColor3 = Color3.new(1,1,1)
-Changelog3.Font = Enum.Font.SourceSans
-Changelog3.TextSize = 14
-Changelog3.Parent = Changelog
-
-local Info = Instance.new('Frame')
-Info.Name = "Info"
-Info.Position = UDim2.new(0.6387,0,0.3914,0)
-Info.Size = UDim2.new(0,190,0,89)
-Info.BackgroundColor3 = Color3.new(0.1176,0.1176,0.1176)
-Info.BorderColor3 = Color3.new(1,0.5608,0)
-Info.Visible = false
-Info.Parent = HennesseyHub
-
-local MainLabel = Instance.new('TextLabel')
-MainLabel.Name = "MainLabel"
-MainLabel.Position = UDim2.new(-0.0053,0,0,0)
-MainLabel.Size = UDim2.new(0,42,0,24)
-MainLabel.BackgroundColor3 = Color3.new(1,1,1)
-MainLabel.BackgroundTransparency = 1
-MainLabel.BorderColor3 = Color3.new(1,1,1)
-MainLabel.Text = "Info:"
-MainLabel.TextColor3 = Color3.new(1,1,1)
-MainLabel.Font = Enum.Font.SourceSans
-MainLabel.TextSize = 14
-MainLabel.Parent = Info
-
-local Info = Instance.new('TextLabel')
-Info.Name = "Info"
-Info.Position = UDim2.new(0,0,0.2697,0)
-Info.Size = UDim2.new(0,190,0,65)
-Info.BackgroundColor3 = Color3.new(1,1,1)
-Info.BackgroundTransparency = 1
-Info.BorderColor3 = Color3.new(1,1,1)
-Info.Text = "-Discord: ub7cmvPbZ4 (join) | Brought to you by Hennessey Executor | Improvements will be made"
-Info.TextColor3 = Color3.new(1,1,1)
-Info.Font = Enum.Font.SourceSans
-Info.TextSize = 14
-Info.Parent = Info
-
+local TextLabel = Instance.new('TextLabel')
+TextLabel.Position = UDim2.new(0.0115,0,0.8878,0)
+TextLabel.Size = UDim2.new(0,247,0,23)
+TextLabel.BackgroundColor3 = Color3.new(1,1,1)
+TextLabel.BackgroundTransparency = 1
+TextLabel.Text = "Discord: https://discord.gg/ub7cmvPbZ4"
+TextLabel.TextColor3 = Color3.new(1,1,1)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.TextSize = 14
+TextLabel.TextScaled = true
+TextLabel.Parent = HennesseyHubFrame
