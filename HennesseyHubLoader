@@ -1,5 +1,5 @@
 --// GUI2LUA V1 \\--
---// Counted 15 objects
+--// Counted 14 objects
 
 local HennesseyHub = Instance.new('ScreenGui')
 HennesseyHub.Name = "HennesseyHub"
@@ -8,9 +8,11 @@ HennesseyHub.Parent = game:GetService("Players").LocalPlayer:WaitForChild("Playe
 
 local HennesseyHubFrame = Instance.new('Frame')
 HennesseyHubFrame.Name = "HennesseyHubFrame"
-HennesseyHubFrame.Position = UDim2.new(0.2795,0,0.2916,0)
+HennesseyHubFrame.Position = UDim2.new(0.5,0,0.5,0)
 HennesseyHubFrame.Size = UDim2.new(0,436,0,212)
 HennesseyHubFrame.BackgroundColor3 = Color3.new(0.1765,0.1765,0.1765)
+HennesseyHubFrame.BorderColor3 = Color3.new(0,0,0)
+HennesseyHubFrame.AnchorPoint = Vector2.new(0.5,0.5)
 HennesseyHubFrame.Parent = HennesseyHub
 
 local GameText = Instance.new('TextButton')
@@ -104,14 +106,15 @@ HenLogo.Parent = HennesseyHubFrame
 
 local TopBar = Instance.new('Frame')
 TopBar.Name = "TopBar"
-TopBar.Position = UDim2.new(-0.0023,0,-0.1007,0)
-TopBar.Size = UDim2.new(0,438,0,36)
+TopBar.Position = UDim2.new(0,0,-0.1007,0)
+TopBar.Size = UDim2.new(0,436,0,36)
 TopBar.BackgroundColor3 = Color3.new(0.1176,0.1176,0.1176)
+TopBar.BorderColor3 = Color3.new(0,0,0)
 TopBar.Parent = HennesseyHubFrame
 
 local HennesseyText = Instance.new('TextLabel')
 HennesseyText.Name = "HennesseyText"
-HennesseyText.Position = UDim2.new(0.0137,0,0,0)
+HennesseyText.Position = UDim2.new(-0,0,0.0278,0)
 HennesseyText.Size = UDim2.new(0,167,0,33)
 HennesseyText.BackgroundColor3 = Color3.new(1,1,1)
 HennesseyText.BackgroundTransparency = 1
@@ -124,7 +127,7 @@ HennesseyText.Parent = TopBar
 
 local Close = Instance.new('TextButton')
 Close.Name = "Close"
-Close.Position = UDim2.new(0.9449,0,0.1667,0)
+Close.Position = UDim2.new(0.9632,0,0.0278,0)
 Close.Size = UDim2.new(0,16,0,21)
 Close.BackgroundColor3 = Color3.new(0.1176,0.1176,0.1176)
 Close.BorderColor3 = Color3.new(0.1176,0.1176,0.1176)
@@ -152,18 +155,15 @@ local UICorner = Instance.new('UICorner')
 UICorner.CornerRadius = UDim.new(0,48)
 UICorner.Parent = Close
 
-local UICorner = Instance.new('UICorner')
-UICorner.CornerRadius = UDim.new(0,48)
-UICorner.Parent = TopBar
-
-local TextLabel = Instance.new('TextLabel')
-TextLabel.Position = UDim2.new(0.0115,0,0.8878,0)
-TextLabel.Size = UDim2.new(0,247,0,23)
-TextLabel.BackgroundColor3 = Color3.new(1,1,1)
-TextLabel.BackgroundTransparency = 1
-TextLabel.Text = "Discord: https://discord.gg/ub7cmvPbZ4"
-TextLabel.TextColor3 = Color3.new(1,1,1)
-TextLabel.Font = Enum.Font.SourceSans
-TextLabel.TextSize = 14
-TextLabel.TextScaled = true
-TextLabel.Parent = HennesseyHubFrame
+local DiscordInvite = Instance.new('TextLabel')
+DiscordInvite.Name = "DiscordInvite"
+DiscordInvite.Position = UDim2.new(0.0115,0,0.8878,0)
+DiscordInvite.Size = UDim2.new(0,247,0,23)
+DiscordInvite.BackgroundColor3 = Color3.new(1,1,1)
+DiscordInvite.BackgroundTransparency = 1
+DiscordInvite.Text = "Discord: https://discord.gg/ub7cmvPbZ4"
+DiscordInvite.TextColor3 = Color3.new(1,1,1)
+DiscordInvite.Font = Enum.Font.SourceSans
+DiscordInvite.TextSize = 14
+DiscordInvite.TextScaled = true
+DiscordInvite.Parent = HennesseyHubFrame
