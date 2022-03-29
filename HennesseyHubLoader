@@ -1,19 +1,68 @@
 --// GUI2LUA V1 \\--
---// Counted 14 objects
+--// Counted 18 objects
 
 local HennesseyHub = Instance.new('ScreenGui')
 HennesseyHub.Name = "HennesseyHub"
 HennesseyHub.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 HennesseyHub.Parent = game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui")
 
+local TopBar = Instance.new('Frame')
+TopBar.Name = "TopBar"
+TopBar.Position = UDim2.new(0.5,0,0.2808,0)
+TopBar.Size = UDim2.new(0,436,0,36)
+TopBar.BackgroundColor3 = Color3.new(0.1176,0.1176,0.1176)
+TopBar.BorderColor3 = Color3.new(0,0,0)
+TopBar.AnchorPoint = Vector2.new(0.5,0.5)
+TopBar.Parent = HennesseyHub
+
+local HennesseyText = Instance.new('TextLabel')
+HennesseyText.Name = "HennesseyText"
+HennesseyText.Position = UDim2.new(-0.026,0,0,-4)
+HennesseyText.Size = UDim2.new(0,167,0,33)
+HennesseyText.BackgroundColor3 = Color3.new(1,1,1)
+HennesseyText.BackgroundTransparency = 1
+HennesseyText.Text = "Hennessey Hub"
+HennesseyText.TextColor3 = Color3.new(1,0.5608,0)
+HennesseyText.Font = Enum.Font.SourceSansSemibold
+HennesseyText.TextSize = 23
+HennesseyText.Parent = TopBar
+
+local Close = Instance.new('TextButton')
+Close.Name = "Close"
+Close.Position = UDim2.new(0.9632,0,0.1667,0)
+Close.Size = UDim2.new(0,9,0,16)
+Close.BackgroundColor3 = Color3.new(0.1176,0.1176,0.1176)
+Close.BorderColor3 = Color3.new(0.1176,0.1176,0.1176)
+Close.Text = "X"
+Close.TextColor3 = Color3.new(1,1,1)
+Close.Font = Enum.Font.Ubuntu
+Close.TextSize = 14
+Close.TextScaled = true
+Close.Parent = TopBar
+
+
+--!fakescript
+pcall(function()
+	local script = { Parent = Close }
+	function OnClicked() 
+			script.Parent.Parent.Parent:Destroy()
+		end 
+	
+	script.Parent.MouseButton1Down:connect(OnClicked)
+end)
+--!end
+
+local UICorner = Instance.new('UICorner')
+UICorner.Parent = Close
+
 local HennesseyHubFrame = Instance.new('Frame')
 HennesseyHubFrame.Name = "HennesseyHubFrame"
-HennesseyHubFrame.Position = UDim2.new(0.5,0,0.5,0)
+HennesseyHubFrame.Position = UDim2.new(0.5,0,3.9444,0)
 HennesseyHubFrame.Size = UDim2.new(0,436,0,212)
 HennesseyHubFrame.BackgroundColor3 = Color3.new(0.1765,0.1765,0.1765)
 HennesseyHubFrame.BorderColor3 = Color3.new(0,0,0)
 HennesseyHubFrame.AnchorPoint = Vector2.new(0.5,0.5)
-HennesseyHubFrame.Parent = HennesseyHub
+HennesseyHubFrame.Parent = TopBar
 
 local GameText = Instance.new('TextButton')
 GameText.Name = "GameText"
@@ -32,17 +81,90 @@ GameText.Parent = HennesseyHubFrame
 --!fakescript
 pcall(function()
 	local script = { Parent = GameText }
-	function OnClicked() 
+	function OnClicked()
+		wait(0.7)
 		if game.PlaceId == 9217365103 then --Test Game 1
 			print("1")
+			
+			game.StarterGui:SetCore("SendNotification", {
+				Title    = "Hennessey Hub Alpha";
+				Text     = "Test Game 1";
+				Duration = 5;
+			})
+			
 		elseif game.PlaceId == 9217366438 then --Test Game 2
 			print("2")
+			
+			game.StarterGui:SetCore("SendNotification", {
+				Title    = "Hennessey Hub Alpha";
+				Text     = "Test Game 2";
+				Duration = 5;
+			})
+			
 		elseif game.PlaceId == 5938036553 then --Frontlines
-			loadstring(game:HttpGet'https://raw.githubusercontent.com/wally-rblx/roblox-scripts/main/frontlines.lua')()
+			loadstring(game:HttpGet'https://raw.githubusercontent.com/HennesseyTeam/HennesseyHub/main/Frontlines')()
+			
+			game.StarterGui:SetCore("SendNotification", {
+				Title    = "Frontlines";
+				Text     = "Source / Creator: Wally";
+				Duration = 5;
+			})
+			
 		elseif game.PlaceId == 5278850819 then --stay alive and flex your time on others
-			loadstring(game:HttpGet('https://raw.githubusercontent.com/wally-rblx/stay-alive-and-flex-time/main/main.lua', true))()
+			loadstring(game:HttpGet'https://raw.githubusercontent.com/HennesseyTeam/HennesseyHub/main/stay%20alive%20and%20flex%20your%20time%20on%20others')()
+			
+			game.StarterGui:SetCore("SendNotification", {
+				Title    = "SAAFYTOO";
+				Text     = "Source / Creator: Wally";
+				Duration = 5;
+			})
+			
+		elseif game.PlaceId == 8268519961 then --find the citrines
+			loadstring(game:HttpGet'https://raw.githubusercontent.com/HennesseyTeam/HennesseyHub/main/Find%20the%20Citrines')()
+			
+			game.StarterGui:SetCore("SendNotification", {
+				Title    = "Find The Citrines";
+				Text     = "Source / Creator: Chili";
+				Duration = 5;
+			})
+			
+		elseif game.PlaceId == 142823291 then --Murder Mystery 2
+			loadstring(game:HttpGet'https://raw.githubusercontent.com/HennesseyTeam/HennesseyHub/main/Murder%20Mystery%202')()
+			
+			game.StarterGui:SetCore("SendNotification", {
+				Title    = "Murder Mystery 2";
+				Text     = "Source / Creator: Eclipse Hub";
+				Duration = 5;
+			})
+			
+		elseif game.PlaceId == 379614936 then --Assasin
+			loadstring(game:HttpGet'https://raw.githubusercontent.com/HennesseyTeam/HennesseyHub/main/Assassin')()
+			
+			game.StarterGui:SetCore("SendNotification", {
+				Title    = "Assasin";
+				Text     = "Source / Creator: VG Hub";
+				Duration = 5;
+			})
+	
+			
+		elseif game.PlaceId == 2413927524 then --The Rake REMASTERED
+			loadstring(game:HttpGet'https://raw.githubusercontent.com/HennesseyTeam/HennesseyHub/main/The%20Rake%20REMASTERED')()
+			
+			game.StarterGui:SetCore("SendNotification", {
+				Title    = "The Rake REMASTERED";
+				Text     = "Source / Creator: RealZzHub";
+				Duration = 5;
+			})
+			
 		else --Universal
 			loadstring(game:HttpGet'https://raw.githubusercontent.com/HennesseyTeam/HennesseyHub/main/Universal')()
+			
+			game.StarterGui:SetCore("SendNotification", {
+				Title    = "Universal ESP + Aimbot";
+				Text     = "Source / Creator: Racist Dolphin";
+				Duration = 5;
+			})
+			
 		end
 	end 
 	
@@ -59,12 +181,28 @@ pcall(function()
 	
 	if game.PlaceId == 9217365103 then --Test Game 1
 		gametext = "Game 1"
+		
 	elseif game.PlaceId == 9217366438 then --Test Game 2
 		gametext = "Game 2"
+		
 	elseif game.PlaceId == 5938036553 then --Frontlines
 		gametext = "Frontlines"
+		
 	elseif game.PlaceId == 5278850819 then --stay alive and flex your time on others
 		gametext = "stay alive and flex your time on others"
+		
+	elseif game.PlaceId == 8268519961 then --Find The Citrines
+		gametext = "Find the Citrines"
+		
+	elseif game.PlaceId == 142823291 then --Murder Mystery 2
+		gametext = "Murder Mystery 2"
+		
+	elseif game.PlaceId == 379614936 then --Assasin
+		gametext = "Assasin"
+		
+	elseif game.PlaceId == 2413927524 then --The Rake REMASTERED
+		gametext = "The Rake REMASTERED"
+		
 	else --Universal
 		gametext = "Universal ESP + Aimbot"
 	end
@@ -78,21 +216,128 @@ end)
 --!fakescript
 pcall(function()
 	local script = { Parent = GameText }
-	function OnClicked() 
-		wait(0.1)
-		script.Parent.Parent.Parent:Destroy()
-	end 
-	
-	script.Parent.MouseButton1Down:connect(OnClicked)
-end)
---!end
-
-
---!fakescript
-pcall(function()
-	local script = { Parent = GameText }
-	function OnClicked() 
-		print("Animations Coming Soon!")
+	function OnClicked()	
+		script.Parent.Parent.Parent.Transparency = 0.1
+		--Text
+		script.Parent.Parent.Parent.HennesseyText.TextTransparency = 0.1
+		script.Parent.Parent.Parent.HennesseyHubFrame.DiscordInvite.TextTransparency = 0.1
+		--Buttons / Frames
+		script.Parent.Parent.Parent.Close.Transparency = 0.1
+		script.Parent.Parent.Parent.HennesseyHubFrame.Transparency = 0.1
+		script.Parent.Parent.Parent.HennesseyHubFrame.GameText.Transparency = 0.1
+		script.Parent.Parent.Parent.HennesseyHubFrame.RoundDivider.Transparency = 0.1
+		script.Parent.Parent.HenLogo.ImageTransparency = 0.1
+		wait(0.03)
+		------------------------------------------------------------------------------------------------------
+		script.Parent.Parent.Parent.Transparency = 0.2
+		--Text
+		script.Parent.Parent.Parent.HennesseyText.TextTransparency = 0.2
+		script.Parent.Parent.Parent.HennesseyHubFrame.DiscordInvite.TextTransparency = 0.2
+		--Buttons / Frames
+		script.Parent.Parent.Parent.Close.Transparency = 0.2
+		script.Parent.Parent.Parent.HennesseyHubFrame.Transparency = 0.2
+		script.Parent.Parent.Parent.HennesseyHubFrame.GameText.Transparency = 0.2
+		script.Parent.Parent.Parent.HennesseyHubFrame.RoundDivider.Transparency = 0.2
+		script.Parent.Parent.HenLogo.ImageTransparency = 0.2
+		wait(0.03)
+		------------------------------------------------------------------------------------------------------
+		script.Parent.Parent.Parent.Transparency = 0.3
+		--Text
+		script.Parent.Parent.Parent.HennesseyText.TextTransparency = 0.3
+		script.Parent.Parent.Parent.HennesseyHubFrame.DiscordInvite.TextTransparency = 0.3
+		--Buttons / Frames
+		script.Parent.Parent.Parent.Close.Transparency = 0.3
+		script.Parent.Parent.Parent.HennesseyHubFrame.Transparency = 0.3
+		script.Parent.Parent.Parent.HennesseyHubFrame.GameText.Transparency = 0.3
+		script.Parent.Parent.Parent.HennesseyHubFrame.RoundDivider.Transparency = 0.3
+		script.Parent.Parent.HenLogo.ImageTransparency = 0.3
+		wait(0.03)
+		------------------------------------------------------------------------------------------------------
+		script.Parent.Parent.Parent.Transparency = 0.4
+		--Text
+		script.Parent.Parent.Parent.HennesseyText.TextTransparency = 0.4
+		script.Parent.Parent.Parent.HennesseyHubFrame.DiscordInvite.TextTransparency = 0.4
+		--Buttons / Frames
+		script.Parent.Parent.Parent.Close.Transparency = 0.4
+		script.Parent.Parent.Parent.HennesseyHubFrame.Transparency = 0.4
+		script.Parent.Parent.Parent.HennesseyHubFrame.GameText.Transparency = 0.4
+		script.Parent.Parent.Parent.HennesseyHubFrame.RoundDivider.Transparency = 0.4
+		script.Parent.Parent.HenLogo.ImageTransparency = 0.4
+		wait(0.03)
+		------------------------------------------------------------------------------------------------------
+		script.Parent.Parent.Parent.Transparency = 0.5
+		--Text
+		script.Parent.Parent.Parent.HennesseyText.TextTransparency = 0.5
+		script.Parent.Parent.Parent.HennesseyHubFrame.DiscordInvite.TextTransparency = 0.5
+		--Buttons / Frames
+		script.Parent.Parent.Parent.Close.Transparency = 0.5
+		script.Parent.Parent.Parent.HennesseyHubFrame.Transparency = 0.5
+		script.Parent.Parent.Parent.HennesseyHubFrame.GameText.Transparency = 0.5
+		script.Parent.Parent.Parent.HennesseyHubFrame.RoundDivider.Transparency = 0.5
+		script.Parent.Parent.HenLogo.ImageTransparency = 0.5
+		wait(0.03)
+		------------------------------------------------------------------------------------------------------
+		script.Parent.Parent.Parent.Transparency = 0.6
+		--Text
+		script.Parent.Parent.Parent.HennesseyText.TextTransparency = 0.6
+		script.Parent.Parent.Parent.HennesseyHubFrame.DiscordInvite.TextTransparency = 0.6
+		--Buttons / Frames
+		script.Parent.Parent.Parent.Close.Transparency = 0.6
+		script.Parent.Parent.Parent.HennesseyHubFrame.Transparency = 0.6
+		script.Parent.Parent.Parent.HennesseyHubFrame.GameText.Transparency = 0.6
+		script.Parent.Parent.Parent.HennesseyHubFrame.RoundDivider.Transparency = 0.6
+		script.Parent.Parent.HenLogo.ImageTransparency = 0.6
+		wait(0.03)
+		------------------------------------------------------------------------------------------------------
+		script.Parent.Parent.Parent.Transparency = 0.7
+		--Text
+		script.Parent.Parent.Parent.HennesseyText.TextTransparency = 0.7
+		script.Parent.Parent.Parent.HennesseyHubFrame.DiscordInvite.TextTransparency = 0.7
+		--Buttons / Frames
+		script.Parent.Parent.Parent.Close.Transparency = 0.7
+		script.Parent.Parent.Parent.HennesseyHubFrame.Transparency = 0.7
+		script.Parent.Parent.Parent.HennesseyHubFrame.GameText.Transparency = 0.7
+		script.Parent.Parent.Parent.HennesseyHubFrame.RoundDivider.Transparency = 0.7
+		script.Parent.Parent.HenLogo.ImageTransparency = 0.7
+		wait(0.03)
+		------------------------------------------------------------------------------------------------------
+		script.Parent.Parent.Parent.Transparency = 0.8
+		--Text
+		script.Parent.Parent.Parent.HennesseyText.TextTransparency = 0.8
+		script.Parent.Parent.Parent.HennesseyHubFrame.DiscordInvite.TextTransparency = 0.8
+		--Buttons / Frames
+		script.Parent.Parent.Parent.Close.Transparency = 0.8
+		script.Parent.Parent.Parent.HennesseyHubFrame.Transparency = 0.8
+		script.Parent.Parent.Parent.HennesseyHubFrame.GameText.Transparency = 0.8
+		script.Parent.Parent.Parent.HennesseyHubFrame.RoundDivider.Transparency = 0.8
+		script.Parent.Parent.HenLogo.ImageTransparency = 0.8
+		wait(0.03)
+		------------------------------------------------------------------------------------------------------
+		script.Parent.Parent.Parent.Transparency = 0.9
+		--Text
+		script.Parent.Parent.Parent.HennesseyText.TextTransparency = 0.9
+		script.Parent.Parent.Parent.HennesseyHubFrame.DiscordInvite.TextTransparency = 0.9
+		--Buttons / Frames
+		script.Parent.Parent.Parent.Close.Transparency = 0.9
+		script.Parent.Parent.Parent.HennesseyHubFrame.Transparency = 0.9
+		script.Parent.Parent.Parent.HennesseyHubFrame.GameText.Transparency = 0.9
+		script.Parent.Parent.Parent.HennesseyHubFrame.RoundDivider.Transparency = 0.9
+		script.Parent.Parent.HenLogo.ImageTransparency = 0.9
+		wait(0.03)
+		------------------------------------------------------------------------------------------------------
+		script.Parent.Parent.Parent.Transparency = 1
+		--Text
+		script.Parent.Parent.Parent.HennesseyText.TextTransparency = 1
+		script.Parent.Parent.Parent.HennesseyHubFrame.DiscordInvite.TextTransparency = 1
+		--Buttons / Frames
+		script.Parent.Parent.Parent.Close.Transparency = 1
+		script.Parent.Parent.Parent.HennesseyHubFrame.Transparency = 1
+		script.Parent.Parent.Parent.HennesseyHubFrame.GameText.Transparency = 1
+		script.Parent.Parent.Parent.HennesseyHubFrame.RoundDivider.Transparency = 1
+		script.Parent.Parent.HenLogo.ImageTransparency = 1
+		wait(0.03)
+		
+		script.Parent.Parent.Parent.Parent:Destroy()
 	end 
 	
 	script.Parent.MouseButton1Down:connect(OnClicked)
@@ -108,57 +353,6 @@ HenLogo.BackgroundTransparency = 1
 HenLogo.Image = "rbxassetid://9217564693"
 HenLogo.Parent = HennesseyHubFrame
 
-local TopBar = Instance.new('Frame')
-TopBar.Name = "TopBar"
-TopBar.Position = UDim2.new(0,0,-0.1007,0)
-TopBar.Size = UDim2.new(0,436,0,36)
-TopBar.BackgroundColor3 = Color3.new(0.1176,0.1176,0.1176)
-TopBar.BorderColor3 = Color3.new(0,0,0)
-TopBar.Parent = HennesseyHubFrame
-
-local HennesseyText = Instance.new('TextLabel')
-HennesseyText.Name = "HennesseyText"
-HennesseyText.Position = UDim2.new(-0,0,0.0278,0)
-HennesseyText.Size = UDim2.new(0,167,0,33)
-HennesseyText.BackgroundColor3 = Color3.new(1,1,1)
-HennesseyText.BackgroundTransparency = 1
-HennesseyText.Text = "Hennessey Hub"
-HennesseyText.TextColor3 = Color3.new(1,0.5608,0)
-HennesseyText.Font = Enum.Font.SourceSansSemibold
-HennesseyText.TextSize = 14
-HennesseyText.TextScaled = true
-HennesseyText.Parent = TopBar
-
-local Close = Instance.new('TextButton')
-Close.Name = "Close"
-Close.Position = UDim2.new(0.9632,0,0.0278,0)
-Close.Size = UDim2.new(0,16,0,21)
-Close.BackgroundColor3 = Color3.new(0.1176,0.1176,0.1176)
-Close.BorderColor3 = Color3.new(0.1176,0.1176,0.1176)
-Close.Text = "X"
-Close.TextColor3 = Color3.new(1,1,1)
-Close.Font = Enum.Font.Ubuntu
-Close.TextSize = 14
-Close.TextScaled = true
-Close.Parent = TopBar
-
-
---!fakescript
-pcall(function()
-	local script = { Parent = Close }
-	function OnClicked() 
-		wait(0.1)
-		script.Parent.Parent.Parent.Parent:Destroy()
-	end 
-	
-	script.Parent.MouseButton1Down:connect(OnClicked)
-end)
---!end
-
-local UICorner = Instance.new('UICorner')
-UICorner.CornerRadius = UDim.new(0,48)
-UICorner.Parent = Close
-
 local DiscordInvite = Instance.new('TextLabel')
 DiscordInvite.Name = "DiscordInvite"
 DiscordInvite.Position = UDim2.new(0.0115,0,0.8878,0)
@@ -172,9 +366,200 @@ DiscordInvite.TextSize = 14
 DiscordInvite.TextScaled = true
 DiscordInvite.Parent = HennesseyHubFrame
 
-game.StarterGui:SetCore("SendNotification", {
-    Title    = "Hennessey Hub";
-    Text     = "Version 0.1.2";
-    Duration = 10;
-    Button1  = "Ok";
-})
+local UICorner = Instance.new('UICorner')
+UICorner.Parent = HennesseyHubFrame
+
+local RoundDivider = Instance.new('Frame')
+RoundDivider.Name = "RoundDivider"
+RoundDivider.Position = UDim2.new(0.001,0,-0.04,0)
+RoundDivider.Size = UDim2.new(0,436,0,22)
+RoundDivider.BackgroundColor3 = Color3.new(0.1765,0.1765,0.1765)
+RoundDivider.BorderSizePixel = 0
+RoundDivider.BorderColor3 = Color3.new(0,0,0)
+RoundDivider.Parent = HennesseyHubFrame
+
+local UICorner = Instance.new('UICorner')
+UICorner.Parent = TopBar
+
+
+--!fakescript
+pcall(function()
+	local script = { Parent = TopBar }
+	local UIS = game:GetService("UserInputService")
+	local dragSpeed = -math.huge
+	
+	local dragToggle = nil
+	local dragInput = nil
+	local dragStart = nil
+	local dragPos = nil
+	
+	function dragify(Frame)
+		function updateInput(input)
+	        local Delta = input.Position - dragStart
+	        local Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + Delta.X, startPos.Y.Scale, startPos.Y.Offset + Delta.Y)
+	        script.Parent.Position = Position
+		end
+		
+	    Frame.InputBegan:Connect(function(input)
+	        if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) and UIS:GetFocusedTextBox() == nil then
+	            dragToggle = true
+	            dragStart = input.Position
+	            startPos = Frame.Position
+	            input.Changed:Connect(function()
+	                if input.UserInputState == Enum.UserInputState.End then
+	                    dragToggle = false
+	                end
+	            end)
+	        end
+		end)
+		
+	    Frame.InputChanged:Connect(function(input)
+	        if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+	            dragInput = input
+	        end
+		end)
+		
+	    game:GetService("UserInputService").InputChanged:Connect(function(input)
+	        if input == dragInput and dragToggle then
+	            updateInput(input)
+	        end
+	    end)
+	end
+	
+	dragify(script.Parent)
+end)
+--!end
+
+
+--!fakescript
+pcall(function()
+	local script = { Parent = TopBar }
+	--------------------------------------------------------------------------------------------------
+	script.Parent.Transparency = 0.9
+	--Text
+	script.Parent.HennesseyText.TextTransparency = 0.9
+	script.Parent.HennesseyHubFrame.DiscordInvite.TextTransparency = 0.9
+	--Buttons / Frames
+	script.Parent.Close.Transparency = 0.9
+	script.Parent.HennesseyHubFrame.Transparency = 0.9
+	script.Parent.HennesseyHubFrame.GameText.Transparency = 0.9
+	script.Parent.HennesseyHubFrame.RoundDivider.Transparency = 0.9
+	script.Parent.HennesseyHubFrame.HenLogo.ImageTransparency = 0.9
+	wait(0.03)
+	--------------------------------------------------------------------------------------------------
+	script.Parent.Transparency = 0.8
+	--Text
+	script.Parent.HennesseyText.TextTransparency = 0.8
+	script.Parent.HennesseyHubFrame.DiscordInvite.TextTransparency = 0.8
+	--Buttons / Frames
+	script.Parent.Close.Transparency = 0.8
+	script.Parent.HennesseyHubFrame.Transparency = 0.8
+	script.Parent.HennesseyHubFrame.GameText.Transparency = 0.8
+	script.Parent.HennesseyHubFrame.RoundDivider.Transparency = 0.8
+	script.Parent.HennesseyHubFrame.HenLogo.ImageTransparency = 0.8
+	wait(0.03)
+	--------------------------------------------------------------------------------------------------
+	script.Parent.Transparency = 0.7
+	--Text
+	script.Parent.HennesseyText.TextTransparency = 0.7
+	script.Parent.HennesseyHubFrame.DiscordInvite.TextTransparency = 0.7
+	--Buttons / Frames
+	script.Parent.Close.Transparency = 0.7
+	script.Parent.HennesseyHubFrame.Transparency = 0.7
+	script.Parent.HennesseyHubFrame.GameText.Transparency = 0.7
+	script.Parent.HennesseyHubFrame.RoundDivider.Transparency = 0.7
+	script.Parent.HennesseyHubFrame.HenLogo.ImageTransparency = 0.7
+	wait(0.03)
+	--------------------------------------------------------------------------------------------------
+	script.Parent.Transparency = 0.6
+	--Text
+	script.Parent.HennesseyText.TextTransparency = 0.6
+	script.Parent.HennesseyHubFrame.DiscordInvite.TextTransparency = 0.6
+	--Buttons / Frames
+	script.Parent.Close.Transparency = 0.6
+	script.Parent.HennesseyHubFrame.Transparency = 0.6
+	script.Parent.HennesseyHubFrame.GameText.Transparency = 0.6
+	script.Parent.HennesseyHubFrame.RoundDivider.Transparency = 0.6
+	script.Parent.HennesseyHubFrame.HenLogo.ImageTransparency = 0.6
+	wait(0.03)
+	--------------------------------------------------------------------------------------------------
+	script.Parent.Transparency = 0.5
+	--Text
+	script.Parent.HennesseyText.TextTransparency = 0.5
+	script.Parent.HennesseyHubFrame.DiscordInvite.TextTransparency = 0.5
+	--Buttons / Frames
+	script.Parent.Close.Transparency = 0.5
+	script.Parent.HennesseyHubFrame.Transparency = 0.5
+	script.Parent.HennesseyHubFrame.GameText.Transparency = 0.5
+	script.Parent.HennesseyHubFrame.RoundDivider.Transparency = 0.5
+	script.Parent.HennesseyHubFrame.HenLogo.ImageTransparency = 0.5
+	wait(0.03)
+	--------------------------------------------------------------------------------------------------
+	script.Parent.Transparency = 0.4
+	--Text
+	script.Parent.HennesseyText.TextTransparency = 0.4
+	script.Parent.HennesseyHubFrame.DiscordInvite.TextTransparency = 0.4
+	--Buttons / Frames
+	script.Parent.Close.Transparency = 0.4
+	script.Parent.HennesseyHubFrame.Transparency = 0.4
+	script.Parent.HennesseyHubFrame.GameText.Transparency = 0.4
+	script.Parent.HennesseyHubFrame.RoundDivider.Transparency = 0.4
+	script.Parent.HennesseyHubFrame.HenLogo.ImageTransparency = 0.4
+	wait(0.03)
+	--------------------------------------------------------------------------------------------------
+	script.Parent.Transparency = 0.3
+	--Text
+	script.Parent.HennesseyText.TextTransparency = 0.3
+	script.Parent.HennesseyHubFrame.DiscordInvite.TextTransparency = 0.3
+	--Buttons / Frames
+	script.Parent.Close.Transparency = 0.3
+	script.Parent.HennesseyHubFrame.Transparency = 0.3
+	script.Parent.HennesseyHubFrame.GameText.Transparency = 0.3
+	script.Parent.HennesseyHubFrame.RoundDivider.Transparency = 0.3
+	script.Parent.HennesseyHubFrame.HenLogo.ImageTransparency = 0.3
+	wait(0.03)
+	--------------------------------------------------------------------------------------------------
+	script.Parent.Transparency = 0.2
+	--Text
+	script.Parent.HennesseyText.TextTransparency = 0.2
+	script.Parent.HennesseyHubFrame.DiscordInvite.TextTransparency = 0.2
+	--Buttons / Frames
+	script.Parent.Close.Transparency = 0.2
+	script.Parent.HennesseyHubFrame.Transparency = 0.2
+	script.Parent.HennesseyHubFrame.GameText.Transparency = 0.2
+	script.Parent.HennesseyHubFrame.RoundDivider.Transparency = 0.2
+	script.Parent.HennesseyHubFrame.HenLogo.ImageTransparency = 0.2
+	wait(0.03)
+	--------------------------------------------------------------------------------------------------
+	script.Parent.Transparency = 0.1
+	--Text
+	script.Parent.HennesseyText.TextTransparency = 0.1
+	script.Parent.HennesseyHubFrame.DiscordInvite.TextTransparency = 0.1
+	--Buttons / Frames
+	script.Parent.Close.Transparency = 0.1
+	script.Parent.HennesseyHubFrame.Transparency = 0.1
+	script.Parent.HennesseyHubFrame.GameText.Transparency = 0.1
+	script.Parent.HennesseyHubFrame.RoundDivider.Transparency = 0.1
+	script.Parent.HennesseyHubFrame.HenLogo.ImageTransparency = 0.1
+	wait(0.03)
+	--------------------------------------------------------------------------------------------------
+	script.Parent.Transparency = 0
+	--Text
+	script.Parent.HennesseyText.TextTransparency = 0
+	script.Parent.HennesseyHubFrame.DiscordInvite.TextTransparency = 0
+	--Buttons / Frames
+	script.Parent.Close.Transparency = 0
+	script.Parent.HennesseyHubFrame.Transparency = 0
+	script.Parent.HennesseyHubFrame.GameText.Transparency = 0
+	script.Parent.HennesseyHubFrame.RoundDivider.Transparency = 0
+	script.Parent.HennesseyHubFrame.HenLogo.ImageTransparency = 0
+	wait(0.03)
+	
+	game.StarterGui:SetCore("SendNotification", {
+		Title    = "Hennessey Hub Alpha";
+		Text     = "Version 0.1.3";
+		Duration = 10;
+		Button1  = "Ok";
+	})
+end)
+--!end
