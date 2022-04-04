@@ -21,7 +21,8 @@ local GameText = Instance.new("TextLabel")
 
 HennesseyHub.Name = "HennesseyHub"
 HennesseyHub.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-HennesseyHub.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+HennesseyHub.ZIndexBehavior = Enum.ZIndexBehavior.Global
+HennesseyHub.DisplayOrder = 999999999
 
 TopBar.Name = "TopBar"
 TopBar.Parent = HennesseyHub
@@ -303,6 +304,36 @@ local function SAACCY_fake_script() -- LoadButton.Execute
 			})
 	
 			loadstring(game:HttpGet'https://raw.githubusercontent.com/HennesseyTeam/HennesseyHub/main/BIG%20Paintball!')()
+
+        elseif game.PlaceId == 621129760 then --KAT
+            
+            game.StarterGui:SetCore("SendNotification", {
+				Title    = "KAT";
+				Text     = "Source / Creator: rang#2415";
+				Duration = 5;
+			})
+            
+            loadstring(game:HttpGet'https://raw.githubusercontent.com/HennesseyTeam/HennesseyHub/main/KAT')()
+
+        elseif game.PlaceId == 2788229376 then --Da Hood
+            
+            game.StarterGui:SetCore("SendNotification", {
+				Title    = "Da Hood";
+				Text     = "Source / Creator: GS21";
+				Duration = 5;
+			})
+			
+			loadstring(game:HttpGet'https://raw.githubusercontent.com/HennesseyTeam/HennesseyHub/main/Da%20Hood')()
+        
+        elseif game.PlaceId == 301549746 then --Counter Blox
+            
+            game.StarterGui:SetCore("SendNotification", {
+				Title    = "Counter Blox";
+				Text     = "Source / Creator: Pawel12d#0272";
+				Duration = 5;
+			})
+			
+			loadstring(game:HttpGet'https://raw.githubusercontent.com/HennesseyTeam/HennesseyHub/main/Counter%20Blox')()
 			
 		else --Universal
 			
@@ -644,7 +675,7 @@ local function IPYL_fake_script() -- TopBar.OpenAnimate
 	
 	game.StarterGui:SetCore("SendNotification", {
 		Title    = "Hennessey Hub Alpha";
-		Text     = "Version 0.1.4";
+		Text     = "Version 0.1.5";
 		Duration = 10;
 		Button1  = "Ok";
 	})
@@ -702,6 +733,15 @@ local function MVTAO_fake_script() -- GameText.DetectGame
 		
 	elseif game.PlaceId == 3527629287 then --BIG Paintball!
 		gametext = "BIG Paintball!"
+    
+    elseif game.PlaceId == 621129760 then --KAT
+        gametext = "KAT"
+
+    elseif game.PlaceId == 2788229376 then --Da Hood
+        gametext = "Da Hood"
+        
+    elseif game.PlaceId == 301549746 then --Counter Blox
+        gametext = "Counter Blox"
 		
 	else --Universal
 		gametext = "Universal ESP + Aimbot"
