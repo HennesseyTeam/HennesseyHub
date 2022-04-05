@@ -1,6 +1,41 @@
 -- Gui to Lua
 -- Version: 3.2
 
+-- Anti-AC Execute
+
+if game.PlaceId == 2768379856 then --3008 (23)
+	
+	game.StarterGui:SetCore("SendNotification", {
+		Title    = "Hennessey Hub Anti-AC";
+		Text     = "Version 0.1.7";
+		Duration = 15;
+		Button1  = "Ok";
+	})
+
+	game.StarterGui:SetCore("SendNotification", {
+		Title    = "Safe Executed / Bypassed AC";
+		Text     = "Destroyed the Hennessey Loader GUI";
+		Duration = 15;
+		Button1 = "Ok";
+	})
+
+	game.StarterGui:SetCore("SendNotification", {
+		Title    = "3008";
+		Text     = "Source / Creator: Zeerox";
+		Duration = 5;
+	})
+	
+	loadstring(game:HttpGet'https://raw.githubusercontent.com/HennesseyTeam/HennesseyHub/main/3008')()
+
+elseif game.PlaceId ~= 2768379856 then
+
+	game.StarterGui:SetCore("SendNotification", {
+		Title    = "Hennessey Hub Alpha";
+		Text     = "Version 0.1.7";
+		Duration = 10;
+		Button1  = "Ok";
+	})
+
 -- Instances:
 
 local HennesseyHub = Instance.new("ScreenGui")
@@ -164,7 +199,7 @@ local function SAACCY_fake_script() -- LoadButton.Execute
 			
 			print("2")
 			
-		elseif game.PlaceId == 5938036553 then --Frontlines
+		elseif game.PlaceId == 5938036553 then --Frontlines (2)
 			
 			game.StarterGui:SetCore("SendNotification", {
 				Title    = "Frontlines";
@@ -174,7 +209,7 @@ local function SAACCY_fake_script() -- LoadButton.Execute
 			
 			loadstring(game:HttpGet'https://raw.githubusercontent.com/HennesseyTeam/HennesseyHub/main/Frontlines')()
 			
-		elseif game.PlaceId == 5278850819 then --stay alive and flex your time on others
+		elseif game.PlaceId == 5278850819 then --stay alive and flex your time on others (3)
 			
 			game.StarterGui:SetCore("SendNotification", {
 				Title    = "SAAFYTOO";
@@ -184,7 +219,7 @@ local function SAACCY_fake_script() -- LoadButton.Execute
 			
 			loadstring(game:HttpGet'https://raw.githubusercontent.com/HennesseyTeam/HennesseyHub/main/stay%20alive%20and%20flex%20your%20time%20on%20others')()
 			
-		elseif game.PlaceId == 8268519961 then --find the citrines
+		elseif game.PlaceId == 8268519961 then --find the citrines (4)
 			
 			game.StarterGui:SetCore("SendNotification", {
 				Title    = "Find The Citrines";
@@ -194,7 +229,7 @@ local function SAACCY_fake_script() -- LoadButton.Execute
 			
 			loadstring(game:HttpGet'https://raw.githubusercontent.com/HennesseyTeam/HennesseyHub/main/Find%20the%20Citrines')()
 			
-		elseif game.PlaceId == 142823291 then --Murder Mystery 2
+		elseif game.PlaceId == 142823291 then --Murder Mystery 2 (5)
 			
 			game.StarterGui:SetCore("SendNotification", {
 				Title    = "Murder Mystery 2";
@@ -204,7 +239,7 @@ local function SAACCY_fake_script() -- LoadButton.Execute
 			
 			loadstring(game:HttpGet'https://raw.githubusercontent.com/HennesseyTeam/HennesseyHub/main/Murder%20Mystery%202')()
 			
-		elseif game.PlaceId == 379614936 then --Assasin
+		elseif game.PlaceId == 379614936 then --Assasin (6)
 			
 			game.StarterGui:SetCore("SendNotification", {
 				Title    = "Assasin";
@@ -215,7 +250,7 @@ local function SAACCY_fake_script() -- LoadButton.Execute
 			loadstring(game:HttpGet'https://raw.githubusercontent.com/HennesseyTeam/HennesseyHub/main/Assassin')()
 	
 			
-		elseif game.PlaceId == 2413927524 then --The Rake REMASTERED
+		elseif game.PlaceId == 2413927524 then --The Rake REMASTERED (7)
 			
 			game.StarterGui:SetCore("SendNotification", {
 				Title    = "The Rake REMASTERED";
@@ -225,7 +260,7 @@ local function SAACCY_fake_script() -- LoadButton.Execute
 			
 			loadstring(game:HttpGet'https://raw.githubusercontent.com/HennesseyTeam/HennesseyHub/main/The%20Rake%20REMASTERED')()
 			
-		elseif game.PlaceId == 286090429 then --Arsenal
+		elseif game.PlaceId == 286090429 then --Arsenal (8)
 	
 			game.StarterGui:SetCore("SendNotification", {
 				Title    = "Arsenal";
@@ -235,7 +270,7 @@ local function SAACCY_fake_script() -- LoadButton.Execute
 	
 			loadstring(game:HttpGet'https://raw.githubusercontent.com/HennesseyTeam/HennesseyHub/main/Arsenal')()
 			
-		elseif game.PlaceId == 893973440 then --Flee The Facility
+		elseif game.PlaceId == 893973440 then --Flee The Facility (9)
 	
 			game.StarterGui:SetCore("SendNotification", {
 				Title    = "Flee The Facility";
@@ -245,7 +280,7 @@ local function SAACCY_fake_script() -- LoadButton.Execute
 	
 			loadstring(game:HttpGet'https://raw.githubusercontent.com/HennesseyTeam/HennesseyHub/main/Flee%20The%20Facility')()
 			
-		elseif game.PlaceId == 606849621 then --Jailbreak
+		elseif game.PlaceId == 606849621 then --Jailbreak (10)
 	
 			game.StarterGui:SetCore("SendNotification", {
 				Title    = "Jailbreak";
@@ -255,7 +290,7 @@ local function SAACCY_fake_script() -- LoadButton.Execute
 	
 			loadstring(game:HttpGet'https://raw.githubusercontent.com/HennesseyTeam/HennesseyHub/main/Jailbreak')()
 			
-		elseif game.PlaceId == 3625110776 then --Elimination Tower
+		elseif game.PlaceId == 3625110776 then --Elimination Tower (11)
 	
 			game.StarterGui:SetCore("SendNotification", {
 				Title    = "Elimination Tower";
@@ -265,7 +300,7 @@ local function SAACCY_fake_script() -- LoadButton.Execute
 	
 			loadstring(game:HttpGet'https://raw.githubusercontent.com/HennesseyTeam/HennesseyHub/main/Elimination%20Tower')()
 			
-		elseif game.PlaceId == 5343994291 then --Outlaster
+		elseif game.PlaceId == 5343994291 then --Outlaster (12)
 	
 			game.StarterGui:SetCore("SendNotification", {
 				Title    = "Outlaster";
@@ -275,7 +310,7 @@ local function SAACCY_fake_script() -- LoadButton.Execute
 	
 			loadstring(game:HttpGet'https://raw.githubusercontent.com/HennesseyTeam/HennesseyHub/main/Outlaster')()
 			
-		elseif game.PlaceId == 2577040780 then --Eviction Notice
+		elseif game.PlaceId == 2577040780 then --Eviction Notice (13)
 	
 			game.StarterGui:SetCore("SendNotification", {
 				Title    = "Eviction Notice";
@@ -285,7 +320,7 @@ local function SAACCY_fake_script() -- LoadButton.Execute
 	
 			loadstring(game:HttpGet'https://raw.githubusercontent.com/HennesseyTeam/HennesseyHub/main/Eviction%20Notice')()
 			
-		elseif game.PlaceId == 734159876 then --SharkBite
+		elseif game.PlaceId == 734159876 then --SharkBite (14)
 	
 			game.StarterGui:SetCore("SendNotification", {
 				Title    = "SharkBite";
@@ -295,7 +330,7 @@ local function SAACCY_fake_script() -- LoadButton.Execute
 	
 			loadstring(game:HttpGet'https://raw.githubusercontent.com/HennesseyTeam/HennesseyHub/main/SharkBite')()
 			
-		elseif game.PlaceId == 3527629287 then --BIG Paintball!
+		elseif game.PlaceId == 3527629287 then --BIG Paintball! (15)
 	
 			game.StarterGui:SetCore("SendNotification", {
 				Title    = "BIG Paintball!";
@@ -305,7 +340,7 @@ local function SAACCY_fake_script() -- LoadButton.Execute
 	
 			loadstring(game:HttpGet'https://raw.githubusercontent.com/HennesseyTeam/HennesseyHub/main/BIG%20Paintball!')()
 
-        elseif game.PlaceId == 621129760 then --KAT
+        elseif game.PlaceId == 621129760 then --KAT (16)
             
             game.StarterGui:SetCore("SendNotification", {
 				Title    = "KAT";
@@ -315,7 +350,7 @@ local function SAACCY_fake_script() -- LoadButton.Execute
             
             loadstring(game:HttpGet'https://raw.githubusercontent.com/HennesseyTeam/HennesseyHub/main/KAT')()
 
-        elseif game.PlaceId == 2788229376 then --Da Hood
+        elseif game.PlaceId == 2788229376 then --Da Hood (17)
             
             game.StarterGui:SetCore("SendNotification", {
 				Title    = "Da Hood";
@@ -325,7 +360,7 @@ local function SAACCY_fake_script() -- LoadButton.Execute
 			
 			loadstring(game:HttpGet'https://raw.githubusercontent.com/HennesseyTeam/HennesseyHub/main/Da%20Hood')()
         
-        elseif game.PlaceId == 301549746 then --Counter Blox
+        elseif game.PlaceId == 301549746 then --Counter Blox (18)
             
             game.StarterGui:SetCore("SendNotification", {
 				Title    = "Counter Blox";
@@ -335,7 +370,67 @@ local function SAACCY_fake_script() -- LoadButton.Execute
 			
 			loadstring(game:HttpGet'https://raw.githubusercontent.com/HennesseyTeam/HennesseyHub/main/Counter%20Blox')()
 			
-		else --Universal
+		elseif game.PlaceId == 292439477 then --Phantom Forces (19)
+			
+			game.StarterGui:SetCore("SendNotification", {
+				Title    = "Phantom Forces";
+				Text     = "Source / Creator: EvoV2";
+				Duration = 5;
+			})
+			
+			loadstring(game:HttpGet'https://raw.githubusercontent.com/HennesseyTeam/HennesseyHub/main/Phantom%20Forces')()
+
+		elseif game.PlaceId == 1224212277 then --Mad City (20)
+			
+			game.StarterGui:SetCore("SendNotification", {
+				Title    = "Mad City";
+				Text     = "Source / Creator: TurkOyuncu99";
+				Duration = 5;
+			})
+			
+			loadstring(game:HttpGet'https://raw.githubusercontent.com/HennesseyTeam/HennesseyHub/main/Mad%20City')()
+
+		elseif game.PlaceId == 185655149 then --Welcome to Bloxburg (21)
+			
+			game.StarterGui:SetCore("SendNotification", {
+				Title    = "Welcome to Bloxburg";
+				Text     = "Coming Soon";
+				Duration = 5;
+			})
+			
+			loadstring(game:HttpGet'https://raw.githubusercontent.com/HennesseyTeam/HennesseyHub/main/Welcome%20to%20Bloxburg')()
+
+		elseif game.PlaceId == 4889315193 then --Total Roblox Drama (22)
+			
+			game.StarterGui:SetCore("SendNotification", {
+				Title    = "Total Roblox Drama";
+				Text     = "Coming Soon";
+				Duration = 5;
+			})
+			
+			loadstring(game:HttpGet'https://github.com/HennesseyTeam/HennesseyHub/blob/main/Total%20Roblox%20Drama')()
+
+		elseif game.PlaceId == 648362523 then --Breaking Point (24)
+			
+			game.StarterGui:SetCore("SendNotification", {
+				Title    = "Breaking Point";
+				Text     = "Source / Creator: Asgarr";
+				Duration = 5;
+			})
+			
+			loadstring(game:HttpGet'https://raw.githubusercontent.com/HennesseyTeam/HennesseyHub/main/Breaking%20Point')()
+
+		elseif game.PlaceId == 155615604 then --Prison Life (25)
+			
+			game.StarterGui:SetCore("SendNotification", {
+				Title    = "Prison Life";
+				Text     = "Source / Creator: Nexus exploits";
+				Duration = 5;
+			})
+			
+			loadstring(game:HttpGet'https://raw.githubusercontent.com/HennesseyTeam/HennesseyHub/main/Prison%20Life')()
+
+		else --Universal (1)
 			
 			game.StarterGui:SetCore("SendNotification", {
 				Title    = "Universal ESP + Aimbot";
@@ -541,7 +636,6 @@ end
 coroutine.wrap(ZTRV_fake_script)()
 local function IPYL_fake_script() -- TopBar.OpenAnimate 
 	local script = Instance.new('LocalScript', TopBar)
-
 	--------------------------------------------------------------------------------------------------
 	script.Parent.Transparency = 0.9
 	--Text
@@ -672,13 +766,6 @@ local function IPYL_fake_script() -- TopBar.OpenAnimate
 	script.Parent.HennesseyHubFrame.LoadButton.Transparency = 0
 	script.Parent.HennesseyHubFrame.RoundDivider.Transparency = 0
 	script.Parent.HennesseyHubFrame.HenLogo.ImageTransparency = 0
-	
-	game.StarterGui:SetCore("SendNotification", {
-		Title    = "Hennessey Hub Alpha";
-		Text     = "Version 0.1.5";
-		Duration = 10;
-		Button1  = "Ok";
-	})
 end
 coroutine.wrap(IPYL_fake_script)()
 local function MVTAO_fake_script() -- GameText.DetectGame 
@@ -692,58 +779,76 @@ local function MVTAO_fake_script() -- GameText.DetectGame
 	elseif game.PlaceId == 9217366438 then --Test Game 2
 		gametext = "Game 2"
 		
-	elseif game.PlaceId == 5938036553 then --Frontlines
+	elseif game.PlaceId == 5938036553 then --Frontlines (2)
 		gametext = "Frontlines"
 		
-	elseif game.PlaceId == 5278850819 then --stay alive and flex your time on others
+	elseif game.PlaceId == 5278850819 then --stay alive and flex your time on others (3)
 		gametext = "stay alive and flex your time on others"
 		
-	elseif game.PlaceId == 8268519961 then --Find The Citrines
+	elseif game.PlaceId == 8268519961 then --Find The Citrines (4)
 		gametext = "Find the Citrines"
 		
-	elseif game.PlaceId == 142823291 then --Murder Mystery 2
+	elseif game.PlaceId == 142823291 then --Murder Mystery 2 (5)
 		gametext = "Murder Mystery 2"
 		
-	elseif game.PlaceId == 379614936 then --Assasin
+	elseif game.PlaceId == 379614936 then --Assasin (6)
 		gametext = "Assasin"
 		
-	elseif game.PlaceId == 2413927524 then --The Rake REMASTERED
+	elseif game.PlaceId == 2413927524 then --The Rake REMASTERED (7)
 		gametext = "The Rake REMASTERED"
 		
-	elseif game.PlaceId == 286090429 then --Arsenal
+	elseif game.PlaceId == 286090429 then --Arsenal (8)
 		gametext = "Arsenal"
 	
-	elseif game.PlaceId == 893973440 then --Flee The Facility
+	elseif game.PlaceId == 893973440 then --Flee The Facility (9)
 		gametext = "Flee The Facility"	
 	
-	elseif game.PlaceId == 606849621 then --Jailbreak
+	elseif game.PlaceId == 606849621 then --Jailbreak (10)
 		gametext = "Jailbreak"
 	
-	elseif game.PlaceId == 3625110776 then --Elimination Tower
+	elseif game.PlaceId == 3625110776 then --Elimination Tower (11)
 		gametext = "Elimination Tower"
 	
-	elseif game.PlaceId == 5343994291 then --Outlaster
+	elseif game.PlaceId == 5343994291 then --Outlaster (12)
 		gametext = "Outlaster"
 	
-	elseif game.PlaceId == 2577040780 then --Eviction Notice
+	elseif game.PlaceId == 2577040780 then --Eviction Notice (13)
 		gametext = "Eviction Notice"
 	
-	elseif game.PlaceId == 734159876 then --SharkBite
+	elseif game.PlaceId == 734159876 then --SharkBite (14)
 		gametext = "SharkBite"
 		
-	elseif game.PlaceId == 3527629287 then --BIG Paintball!
+	elseif game.PlaceId == 3527629287 then --BIG Paintball! (15)
 		gametext = "BIG Paintball!"
     
-    elseif game.PlaceId == 621129760 then --KAT
+    elseif game.PlaceId == 621129760 then --KAT (16)
         gametext = "KAT"
 
-    elseif game.PlaceId == 2788229376 then --Da Hood
+    elseif game.PlaceId == 2788229376 then --Da Hood (17)
         gametext = "Da Hood"
         
-    elseif game.PlaceId == 301549746 then --Counter Blox
+    elseif game.PlaceId == 301549746 then --Counter Blox (18)
         gametext = "Counter Blox"
+
+	elseif game.PlaceId == 292439477 then --Phantom Forces (19)
+        gametext = "Phantom Forces"
+
+	elseif game.PlaceId == 1224212277 then --Mad City (20)
+		gametext = "Mad City"
+
+	elseif game.PlaceId == 185655149 then --Welcome to Bloxburg (21)
+		gametext = "Welcome to Bloxburg"
+
+	elseif game.PlaceId == 4889315193 then --Total Roblox Drama (22)
+		gametext = "Total Roblox Drama"
+
+	elseif game.PlaceId == 648362523 then --Breaking Point (24)
+		gametext = "Breaking Point"
+
+	elseif game.PlaceId == 155615604 then --Prison Life (25)
+		gametext = "Prison Life"
 		
-	else --Universal
+	else --Universal (1)
 		gametext = "Universal ESP + Aimbot"
 	end
 	
@@ -751,3 +856,4 @@ local function MVTAO_fake_script() -- GameText.DetectGame
 	script.Parent.Text = gametext
 end
 coroutine.wrap(MVTAO_fake_script)()
+end
