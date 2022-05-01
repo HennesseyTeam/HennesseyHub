@@ -140,7 +140,7 @@ GameText.TextWrapped = true
 
 game.StarterGui:SetCore("SendNotification", {
 	Title    = "Hennessey Hub Beta";
-	Text     = "Version 0.1.8";
+	Text     = "Version 0.1.9";
 	Duration = 5;
 })
 
@@ -442,140 +442,34 @@ coroutine.wrap(SAACCY_fake_script)()
 local function QDVGE_fake_script() -- LoadButton.DestroyGUI 
 	local script = Instance.new('LocalScript', LoadButton)
 
-	function OnClicked()	
-		script.Parent.Parent.Parent.Transparency = 0.1
+	    function OnClicked()
+	    function transparent(TransparencyValue)
+		script.Parent.Parent.Parent.Transparency = TransparencyValue
 		--Text
-		script.Parent.Parent.Parent.HennesseyText.TextTransparency = 0.1
-		script.Parent.Parent.Parent.GameText.TextTransparency = 0.1
-		script.Parent.Parent.Parent.HennesseyHubFrame.DiscordInvite.TextTransparency = 0.1
+		script.Parent.Parent.Parent.HennesseyText.TextTransparency = TransparencyValue
+		script.Parent.Parent.Parent.GameText.TextTransparency = TransparencyValue
+		script.Parent.Parent.Parent.HennesseyHubFrame.DiscordInvite.TextTransparency = TransparencyValue
 		--Buttons / Frames
-		script.Parent.Parent.Parent.Close.Transparency = 0.1
-		script.Parent.Parent.Parent.HennesseyHubFrame.Transparency = 0.1
-		script.Parent.Parent.Parent.HennesseyHubFrame.LoadButton.Transparency = 0.1
-		script.Parent.Parent.Parent.HennesseyHubFrame.RoundDivider.Transparency = 0.1
-		script.Parent.Parent.HenLogo.ImageTransparency = 0.1
-		wait(0.03)
-		------------------------------------------------------------------------------------------------------
-		script.Parent.Parent.Parent.Transparency = 0.2
-		--Text
-		script.Parent.Parent.Parent.HennesseyText.TextTransparency = 0.2
-		script.Parent.Parent.Parent.GameText.TextTransparency = 0.2
-		script.Parent.Parent.Parent.HennesseyHubFrame.DiscordInvite.TextTransparency = 0.2
-		--Buttons / Frames
-		script.Parent.Parent.Parent.Close.Transparency = 0.2
-		script.Parent.Parent.Parent.HennesseyHubFrame.Transparency = 0.2
-		script.Parent.Parent.Parent.HennesseyHubFrame.LoadButton.Transparency = 0.2
-		script.Parent.Parent.Parent.HennesseyHubFrame.RoundDivider.Transparency = 0.2
-		script.Parent.Parent.HenLogo.ImageTransparency = 0.2
-		wait(0.03)
-		------------------------------------------------------------------------------------------------------
-		script.Parent.Parent.Parent.Transparency = 0.3
-		--Text
-		script.Parent.Parent.Parent.HennesseyText.TextTransparency = 0.3
-		script.Parent.Parent.Parent.GameText.TextTransparency = 0.3
-		script.Parent.Parent.Parent.HennesseyHubFrame.DiscordInvite.TextTransparency = 0.3
-		--Buttons / Frames
-		script.Parent.Parent.Parent.Close.Transparency = 0.3
-		script.Parent.Parent.Parent.HennesseyHubFrame.Transparency = 0.3
-		script.Parent.Parent.Parent.HennesseyHubFrame.LoadButton.Transparency = 0.3
-		script.Parent.Parent.Parent.HennesseyHubFrame.RoundDivider.Transparency = 0.3
-		script.Parent.Parent.HenLogo.ImageTransparency = 0.3
-		wait(0.03)
-		------------------------------------------------------------------------------------------------------
-		script.Parent.Parent.Parent.Transparency = 0.4
-		--Text
-		script.Parent.Parent.Parent.HennesseyText.TextTransparency = 0.4
-		script.Parent.Parent.Parent.GameText.TextTransparency = 0.4
-		script.Parent.Parent.Parent.HennesseyHubFrame.DiscordInvite.TextTransparency = 0.4
-		--Buttons / Frames
-		script.Parent.Parent.Parent.Close.Transparency = 0.4
-		script.Parent.Parent.Parent.HennesseyHubFrame.Transparency = 0.4
-		script.Parent.Parent.Parent.HennesseyHubFrame.LoadButton.Transparency = 0.4
-		script.Parent.Parent.Parent.HennesseyHubFrame.RoundDivider.Transparency = 0.4
-		script.Parent.Parent.HenLogo.ImageTransparency = 0.4
-		wait(0.03)
-		------------------------------------------------------------------------------------------------------
-		script.Parent.Parent.Parent.Transparency = 0.5
-		--Text
-		script.Parent.Parent.Parent.HennesseyText.TextTransparency = 0.5
-		script.Parent.Parent.Parent.GameText.TextTransparency = 0.5
-		script.Parent.Parent.Parent.HennesseyHubFrame.DiscordInvite.TextTransparency = 0.5
-		--Buttons / Frames
-		script.Parent.Parent.Parent.Close.Transparency = 0.5
-		script.Parent.Parent.Parent.HennesseyHubFrame.Transparency = 0.5
-		script.Parent.Parent.Parent.HennesseyHubFrame.LoadButton.Transparency = 0.5
-		script.Parent.Parent.Parent.HennesseyHubFrame.RoundDivider.Transparency = 0.5
-		script.Parent.Parent.HenLogo.ImageTransparency = 0.5
-		wait(0.03)
-		------------------------------------------------------------------------------------------------------
-		script.Parent.Parent.Parent.Transparency = 0.6
-		--Text
-		script.Parent.Parent.Parent.HennesseyText.TextTransparency = 0.6
-		script.Parent.Parent.Parent.GameText.TextTransparency = 0.6
-		script.Parent.Parent.Parent.HennesseyHubFrame.DiscordInvite.TextTransparency = 0.6
-		--Buttons / Frames
-		script.Parent.Parent.Parent.Close.Transparency = 0.6
-		script.Parent.Parent.Parent.HennesseyHubFrame.Transparency = 0.6
-		script.Parent.Parent.Parent.HennesseyHubFrame.LoadButton.Transparency = 0.6
-		script.Parent.Parent.Parent.HennesseyHubFrame.RoundDivider.Transparency = 0.6
-		script.Parent.Parent.HenLogo.ImageTransparency = 0.6
-		wait(0.03)
-		------------------------------------------------------------------------------------------------------
-		script.Parent.Parent.Parent.Transparency = 0.7
-		--Text
-		script.Parent.Parent.Parent.HennesseyText.TextTransparency = 0.7
-		script.Parent.Parent.Parent.GameText.TextTransparency = 0.7
-		script.Parent.Parent.Parent.HennesseyHubFrame.DiscordInvite.TextTransparency = 0.7
-		--Buttons / Frames
-		script.Parent.Parent.Parent.Close.Transparency = 0.7
-		script.Parent.Parent.Parent.HennesseyHubFrame.Transparency = 0.7
-		script.Parent.Parent.Parent.HennesseyHubFrame.LoadButton.Transparency = 0.7
-		script.Parent.Parent.Parent.HennesseyHubFrame.RoundDivider.Transparency = 0.7
-		script.Parent.Parent.HenLogo.ImageTransparency = 0.7
-		wait(0.03)
-		------------------------------------------------------------------------------------------------------
-		script.Parent.Parent.Parent.Transparency = 0.8
-		--Text
-		script.Parent.Parent.Parent.HennesseyText.TextTransparency = 0.8
-		script.Parent.Parent.Parent.GameText.TextTransparency = 0.8
-		script.Parent.Parent.Parent.HennesseyHubFrame.DiscordInvite.TextTransparency = 0.8
-		--Buttons / Frames
-		script.Parent.Parent.Parent.Close.Transparency = 0.8
-		script.Parent.Parent.Parent.HennesseyHubFrame.Transparency = 0.8
-		script.Parent.Parent.Parent.HennesseyHubFrame.LoadButton.Transparency = 0.8
-		script.Parent.Parent.Parent.HennesseyHubFrame.RoundDivider.Transparency = 0.8
-		script.Parent.Parent.HenLogo.ImageTransparency = 0.8
-		wait(0.03)
-		------------------------------------------------------------------------------------------------------
-		script.Parent.Parent.Parent.Transparency = 0.9
-		--Text
-		script.Parent.Parent.Parent.HennesseyText.TextTransparency = 0.9
-		script.Parent.Parent.Parent.GameText.TextTransparency = 0.9
-		script.Parent.Parent.Parent.HennesseyHubFrame.DiscordInvite.TextTransparency = 0.9
-		--Buttons / Frames
-		script.Parent.Parent.Parent.Close.Transparency = 0.9
-		script.Parent.Parent.Parent.HennesseyHubFrame.Transparency = 0.9
-		script.Parent.Parent.Parent.HennesseyHubFrame.LoadButton.Transparency = 0.9
-		script.Parent.Parent.Parent.HennesseyHubFrame.RoundDivider.Transparency = 0.9
-		script.Parent.Parent.HenLogo.ImageTransparency = 0.9
-		wait(0.03)
-		------------------------------------------------------------------------------------------------------
-		script.Parent.Parent.Parent.Transparency = 1
-		--Text
-		script.Parent.Parent.Parent.HennesseyText.TextTransparency = 1
-		script.Parent.Parent.Parent.GameText.TextTransparency = 1
-		script.Parent.Parent.Parent.HennesseyHubFrame.DiscordInvite.TextTransparency = 1
-		--Buttons / Frames
-		script.Parent.Parent.Parent.Close.Transparency = 1
-		script.Parent.Parent.Parent.HennesseyHubFrame.Transparency = 1
-		script.Parent.Parent.Parent.HennesseyHubFrame.LoadButton.Transparency = 1
-		script.Parent.Parent.Parent.HennesseyHubFrame.RoundDivider.Transparency = 1
-		script.Parent.Parent.HenLogo.ImageTransparency = 1
+		script.Parent.Parent.Parent.Close.Transparency = TransparencyValue
+		script.Parent.Parent.Parent.HennesseyHubFrame.Transparency = TransparencyValue
+		script.Parent.Parent.Parent.HennesseyHubFrame.LoadButton.Transparency = TransparencyValue
+		script.Parent.Parent.Parent.HennesseyHubFrame.RoundDivider.Transparency = TransparencyValue
+		script.Parent.Parent.HenLogo.ImageTransparency = TransparencyValue
 		wait(0.03)
 		
-		script.Parent.Parent.Parent.Parent:Destroy()
+	    end
+	transparent(0.1)
+	transparent(0.2)
+	transparent(0.3)
+	transparent(0.4)
+	transparent(0.5)
+	transparent(0.6)
+	transparent(0.7)
+	transparent(0.8)
+	transparent(0.9)
+	transparent(1)
+	script.Parent.Parent.Parent.Parent:Destroy()
 	end 
-	
 	script.Parent.MouseButton1Down:connect(OnClicked)
 end
 coroutine.wrap(QDVGE_fake_script)()
@@ -626,138 +520,32 @@ local function ZTRV_fake_script() -- TopBar.Dragify
 	dragify(script.Parent)
 end
 coroutine.wrap(ZTRV_fake_script)()
-local function IPYL_fake_script() -- TopBar.OpenAnimate 
+	local function IPYL_fake_script() -- TopBar.OpenAnimate 
 	local script = Instance.new('LocalScript', TopBar)
-	--------------------------------------------------------------------------------------------------
-	script.Parent.Transparency = 0.9
+	function transparent(TransparencyValue)
+        script.Parent.Transparency = TransparencyValue
 	--Text
-	script.Parent.HennesseyText.TextTransparency = 0.9
-	script.Parent.GameText.TextTransparency = 0.9
-	script.Parent.HennesseyHubFrame.DiscordInvite.TextTransparency = 0.9
+	script.Parent.HennesseyText.TextTransparency = TransparencyValue
+	script.Parent.GameText.TextTransparency = TransparencyValue
+	script.Parent.HennesseyHubFrame.DiscordInvite.TextTransparency = TransparencyValue
 	--Buttons / Frames
-	script.Parent.Close.Transparency = 0.9
-	script.Parent.HennesseyHubFrame.Transparency = 0.9
-	script.Parent.HennesseyHubFrame.LoadButton.Transparency = 0.9
-	script.Parent.HennesseyHubFrame.RoundDivider.Transparency = 0.9
-	script.Parent.HennesseyHubFrame.HenLogo.ImageTransparency = 0.9
+	script.Parent.Close.Transparency = TransparencyValue
+	script.Parent.HennesseyHubFrame.Transparency = TransparencyValue
+	script.Parent.HennesseyHubFrame.LoadButton.Transparency = TransparencyValue
+	script.Parent.HennesseyHubFrame.RoundDivider.Transparency = TransparencyValue
+	script.Parent.HennesseyHubFrame.HenLogo.ImageTransparency = TransparencyValue
 	wait(0.03)
-	--------------------------------------------------------------------------------------------------
-	script.Parent.Transparency = 0.8
-	--Text
-	script.Parent.HennesseyText.TextTransparency = 0.8
-	script.Parent.GameText.TextTransparency = 0.8
-	script.Parent.HennesseyHubFrame.DiscordInvite.TextTransparency = 0.8
-	--Buttons / Frames
-	script.Parent.Close.Transparency = 0.8
-	script.Parent.HennesseyHubFrame.Transparency = 0.8
-	script.Parent.HennesseyHubFrame.LoadButton.Transparency = 0.8
-	script.Parent.HennesseyHubFrame.RoundDivider.Transparency = 0.8
-	script.Parent.HennesseyHubFrame.HenLogo.ImageTransparency = 0.8
-	wait(0.03)
-	--------------------------------------------------------------------------------------------------
-	script.Parent.Transparency = 0.7
-	--Text
-	script.Parent.HennesseyText.TextTransparency = 0.7
-	script.Parent.GameText.TextTransparency = 0.7
-	script.Parent.HennesseyHubFrame.DiscordInvite.TextTransparency = 0.7
-	--Buttons / Frames
-	script.Parent.Close.Transparency = 0.7
-	script.Parent.HennesseyHubFrame.Transparency = 0.7
-	script.Parent.HennesseyHubFrame.LoadButton.Transparency = 0.7
-	script.Parent.HennesseyHubFrame.RoundDivider.Transparency = 0.7
-	script.Parent.HennesseyHubFrame.HenLogo.ImageTransparency = 0.7
-	wait(0.03)
-	--------------------------------------------------------------------------------------------------
-	script.Parent.Transparency = 0.6
-	--Text
-	script.Parent.HennesseyText.TextTransparency = 0.6
-	script.Parent.GameText.TextTransparency = 0.6
-	script.Parent.HennesseyHubFrame.DiscordInvite.TextTransparency = 0.6
-	--Buttons / Frames
-	script.Parent.Close.Transparency = 0.6
-	script.Parent.HennesseyHubFrame.Transparency = 0.6
-	script.Parent.HennesseyHubFrame.LoadButton.Transparency = 0.6
-	script.Parent.HennesseyHubFrame.RoundDivider.Transparency = 0.6
-	script.Parent.HennesseyHubFrame.HenLogo.ImageTransparency = 0.6
-	wait(0.03)
-	--------------------------------------------------------------------------------------------------
-	script.Parent.Transparency = 0.5
-	--Text
-	script.Parent.HennesseyText.TextTransparency = 0.5
-	script.Parent.GameText.TextTransparency = 0.5
-	script.Parent.HennesseyHubFrame.DiscordInvite.TextTransparency = 0.5
-	--Buttons / Frames
-	script.Parent.Close.Transparency = 0.5
-	script.Parent.HennesseyHubFrame.Transparency = 0.5
-	script.Parent.HennesseyHubFrame.LoadButton.Transparency = 0.5
-	script.Parent.HennesseyHubFrame.RoundDivider.Transparency = 0.5
-	script.Parent.HennesseyHubFrame.HenLogo.ImageTransparency = 0.5
-	wait(0.03)
-	--------------------------------------------------------------------------------------------------
-	script.Parent.Transparency = 0.4
-	--Text
-	script.Parent.HennesseyText.TextTransparency = 0.4
-	script.Parent.GameText.TextTransparency = 0.4
-	script.Parent.HennesseyHubFrame.DiscordInvite.TextTransparency = 0.4
-	--Buttons / Frames
-	script.Parent.Close.Transparency = 0.4
-	script.Parent.HennesseyHubFrame.Transparency = 0.4
-	script.Parent.HennesseyHubFrame.LoadButton.Transparency = 0.4
-	script.Parent.HennesseyHubFrame.RoundDivider.Transparency = 0.4
-	script.Parent.HennesseyHubFrame.HenLogo.ImageTransparency = 0.4
-	wait(0.03)
-	
-	--------------------------------------------------------------------------------------------------
-	script.Parent.Transparency = 0.3
-	--Text
-	script.Parent.HennesseyText.TextTransparency = 0.3
-	script.Parent.GameText.TextTransparency = 0.3
-	script.Parent.HennesseyHubFrame.DiscordInvite.TextTransparency = 0.3
-	--Buttons / Frame
-	script.Parent.Close.Transparency = 0.3
-	script.Parent.HennesseyHubFrame.Transparency = 0.3
-	script.Parent.HennesseyHubFrame.LoadButton.Transparency = 0.3
-	script.Parent.HennesseyHubFrame.RoundDivider.Transparency = 0.3
-	script.Parent.HennesseyHubFrame.HenLogo.ImageTransparency = 0.3
-	wait(0.03)
-	--------------------------------------------------------------------------------------------------
-	script.Parent.Transparency = 0.2
-	--Text
-	script.Parent.HennesseyText.TextTransparency = 0.2
-	script.Parent.GameText.TextTransparency = 0.2
-	script.Parent.HennesseyHubFrame.DiscordInvite.TextTransparency = 0.2
-	--Buttons / Frames
-	script.Parent.Close.Transparency = 0.2
-	script.Parent.HennesseyHubFrame.Transparency = 0.2
-	script.Parent.HennesseyHubFrame.LoadButton.Transparency = 0.2
-	script.Parent.HennesseyHubFrame.RoundDivider.Transparency = 0.2
-	script.Parent.HennesseyHubFrame.HenLogo.ImageTransparency = 0.2
-	wait(0.03)
-	--------------------------------------------------------------------------------------------------
-	script.Parent.Transparency = 0.1
-	--Text
-	script.Parent.HennesseyText.TextTransparency = 0.1
-	script.Parent.GameText.TextTransparency = 0.1
-	script.Parent.HennesseyHubFrame.DiscordInvite.TextTransparency = 0.1
-	--Buttons / Frames
-	script.Parent.Close.Transparency = 0.1
-	script.Parent.HennesseyHubFrame.Transparency = 0.1
-	script.Parent.HennesseyHubFrame.LoadButton.Transparency = 0.1
-	script.Parent.HennesseyHubFrame.RoundDivider.Transparency = 0.1
-	script.Parent.HennesseyHubFrame.HenLogo.ImageTransparency = 0.1
-	wait(0.03)
-	--------------------------------------------------------------------------------------------------
-	script.Parent.Transparency = 0
-	--Text
-	script.Parent.HennesseyText.TextTransparency = 0
-	script.Parent.GameText.TextTransparency = 0
-	script.Parent.HennesseyHubFrame.DiscordInvite.TextTransparency = 0
-	--Buttons / Frames
-	script.Parent.Close.Transparency = 0
-	script.Parent.HennesseyHubFrame.Transparency = 0
-	script.Parent.HennesseyHubFrame.LoadButton.Transparency = 0
-	script.Parent.HennesseyHubFrame.RoundDivider.Transparency = 0
-	script.Parent.HennesseyHubFrame.HenLogo.ImageTransparency = 0
+end
+    transparent(0.9)
+    transparent(0.8)
+    transparent(0.7)
+    transparent(0.6)
+    transparent(0.5)
+    transparent(0.4)
+    transparent(0.3)
+    transparent(0.2)
+    transparent(0.1)
+    transparent(0)
 end
 coroutine.wrap(IPYL_fake_script)()
 local function MVTAO_fake_script() -- GameText.DetectGame 
